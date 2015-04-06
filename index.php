@@ -26,18 +26,15 @@
                         <a href="<?php the_permalink(); ?>">Continuer à lire</a>
                     </article>
                 <?php endwhile; ?>
-               
-
-                <?php wp_reset_postdata(); ?>
                 
             <?php else : ?>
-                <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                <p>Désolé, aucun article ne </p>
             <?php endif; ?>
 
-            <div class=" alignleft"><?php next_posts_link( 'Articles précédents' ); ?></div>
-            <div class=" alignright"><?php previous_posts_link( 'Articles suivants' ); ?></div>
+            <div class="alignleft"><?php next_posts_link( 'Articles précédents' ); ?></div>
+            <div class="alignright"><?php previous_posts_link( 'Articles suivants' ); ?></div>
 
-        </div>
+        </div><?php // col-md-8 ?>
 
         <div class="col-md-4">
             <?php get_sidebar(); ?>
