@@ -41,7 +41,7 @@
 
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             
-                        <div><?php echo 'Posté il y a ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?> par <a href=""><?php echo get_post_meta($post->ID, 'question-nom', true); ?></a> </div>
+                        <div><?php echo 'Posté il y a ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?> par <?php echo get_post_meta($post->ID, 'question-nom', true); ?> </div>
                         
                         <p>
                             <span class="tag">
