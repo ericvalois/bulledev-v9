@@ -6,7 +6,7 @@
 
 	<ul>
 		<?php 
-			$questions = new WP_Query( array('order' => 'DESC', 'posts_per_page' => 3, 'post_type' => 'question', 'orderby' => 'comment_count' )); 
+			$questions = new WP_Query( array('order' => 'DESC', 'posts_per_page' => 3, 'post_type' => 'question' )); 
 		
 			while ($questions->have_posts()) : $questions->the_post(); ?>
 				<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
