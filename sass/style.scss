@@ -292,7 +292,8 @@ button,
 	width: 100%;
 	text-align: center;
 	height: 40px;
-
+	line-height: 40px;
+	padding: 0;
 }
 
 .mc_embed_signup small{
@@ -310,6 +311,7 @@ button,
 	opacity: 0.8;
 	padding-left: 55px;
 	position: relative;
+	line-height: 2;
 }
 
 #meta img,
