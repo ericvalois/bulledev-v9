@@ -11,13 +11,12 @@ a{ text-decoration: none; }
  input{ color: inherit; font-family: inherit; font-style: inherit; font-weight: inherit; }
  input{ min-height: 1.5em; }
 body, input{ color: rgb(0, 0, 0); font-family: 'Open Sans', sans-serif; font-size: 1rem; }
-h1, h3, h4{ clear: both; }
+h1, h2, h3, h4{ clear: both; }
 p{ margin-bottom: 1.5em; }
- cite{ font-style: italic; }
-.clear::before, .clear::after, .site-header::before, .site-header::after, .site-content::before, .site-content::after{ content: ''; display: table; }
-.clear::after, .site-header::after, .site-content::after{ clear: both; }
+.clear::before, .clear::after, .comment-content::before, .comment-content::after, .site-header::before, .site-header::after, .site-content::before, .site-content::after{ content: ''; display: table; }
+.clear::after, .comment-content::after, .site-header::after, .site-content::after{ clear: both; }
 .hentry{ margin-top: 0px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; }
-.container{ margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; max-width: 1200px; }
+.container{ margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; max-width: 1400px; }
 @media (min-width: 768px){
 .container{ width: 750px; }
 }
@@ -25,7 +24,7 @@ p{ margin-bottom: 1.5em; }
 .container{ width: 970px; }
 }
 @media (min-width: 1200px){
-.container{ width: 1170px; }
+.container{ width: 100%; }
 }
 .row{ margin-left: -15px; margin-right: -15px; }
  .col-sm-4, .col-md-4, .col-sm-8, .col-md-8{ position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
@@ -41,10 +40,11 @@ p{ margin-bottom: 1.5em; }
 }
 body{ font-family: 'Open Sans', sans-serif; color: rgb(70, 70, 70); line-height: 1.5; font-weight: 400; font-size: 1.1rem; }
 h1{ font-size: 3.2rem; line-height: 3.62rem; margin-top: 2.1rem; margin-right: 0px; margin-bottom: 1.68rem; margin-left: 0px; font-weight: 600; }
+h2{ font-size: 2.56rem; line-height: 2.916rem; margin-top: 1.78rem; margin-right: 0px; margin-bottom: 1.424rem; margin-left: 0px; font-weight: 600; }
 h3{ font-size: 1.92rem; line-height: 2.212rem; margin-top: 1.46rem; margin-right: 0px; margin-bottom: 1.168rem; margin-left: 0px; font-weight: 600; }
 h4{ font-size: 1.28rem; line-height: 1.508rem; margin-top: 1.14rem; margin-right: 0px; margin-bottom: 0.912rem; margin-left: 0px; font-weight: 400; }
-h1, h3, h4{ -webkit-font-smoothing: antialiased; color: rgb(0, 0, 0); }
-ul{ margin-top: 0px; margin-right: 0px; margin-bottom: 20px; margin-left: 20px; }
+h1, h2, h3, h4{ -webkit-font-smoothing: antialiased; color: rgb(0, 0, 0); }
+ul, ol{ margin-top: 0px; margin-right: 0px; margin-bottom: 20px; margin-left: 20px; }
 li{ margin-bottom: 5px; }
 a{ color: rgb(54, 134, 190); }
 img{ max-width: 100%; height: auto; }
@@ -58,10 +58,10 @@ input[type="email"], input[type="text"]{ background-color: rgb(247, 247, 247); o
 #sidebar ul{ margin-top: 20px; }
 #sidebar h4{ font-size: 1.5rem; font-weight: 600; margin-bottom: 25px; }
 .mc_embed_signup #mc-embedded-subscribe{ width: 100%; text-align: center; margin-top: 5px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; background-color: rgb(147, 204, 115); height: 40px; }
-.sidebar_box .button{ width: 100%; text-align: center; height: 40px; }
+.sidebar_box .button{ width: 100%; text-align: center; height: 40px; line-height: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
 .mc_embed_signup small{ text-align: center; }
 .sidebar_box a{ width: 100%; text-align: center; }
-#meta{ font-size: 14px; opacity: 0.8; padding-left: 55px; position: relative; }
+#meta{ font-size: 14px; opacity: 0.8; padding-left: 55px; position: relative; line-height: 2; }
  #meta .wrap_avatar_single{ border-top-left-radius: 50% 50%; border-top-right-radius: 50% 50%; border-bottom-right-radius: 50% 50%; border-bottom-left-radius: 50% 50%; position: absolute; top: 0px; left: 0px; }
 .wrap_avatar_single{ width: 40px; height: 40px; color: rgb(255, 255, 255); font-size: 22px; text-align: center; line-height: 40px; font-weight: 400; }
 .sidebar_box{ margin-bottom: 50px; }
