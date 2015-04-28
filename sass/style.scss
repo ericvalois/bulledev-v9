@@ -284,7 +284,31 @@ button,
 	margin: 5px 0 10px 0;
 	background-color: #93cc73;
 	height: 40px;
+}
 
+#mc-embedded-subscribe-footer{
+	width: 100%;
+	text-align: center;
+	margin: 5px auto 10px auto;
+	background-color: #93cc73;
+	height: 40px;
+}
+
+.mc-embedded-subscribe-form-footer{
+	max-width: 650px;
+	display: table;
+	margin: 30px auto;
+	width: 100%;
+}
+
+.site-footer{
+	background-color: #f7f7f7;
+	margin: 50px 0 0 0;
+	padding: 30px 0;
+}
+
+.site-footer input[type="email"]{
+	background-color: #fff;
 }
 
 .sidebar_box .button,
