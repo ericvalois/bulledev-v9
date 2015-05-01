@@ -8,7 +8,7 @@
         <div id="meta">
 			
 			<?php if( validate_gravatar( get_post_meta($post->ID, 'question-courriel', true) ) ): ?>
-				<?php echo get_avatar( get_post_meta($post->ID, 'question-courriel', true), 100, $default, $alt ); ?>
+				<?php echo get_avatar( get_post_meta($post->ID, 'question-courriel', true), 40, $default, $alt ); ?>
 			<?php else: ?>
 				<div class="wrap_avatar_single" style="background-color: <?php echo get_post_meta($post->ID, 'avatar_color', true); ?>">
 					<?php echo substr( get_post_meta($post->ID, 'question-nom', true) , 0, 1); ?>

@@ -44,6 +44,8 @@ add_action( 'widgets_init', 'bulledev_v9_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bulledev_scripts_and_styles() {
+
+    // Only on stage
     if( !strpos($_SERVER['SERVER_NAME'], 'bulledev.com') ){
         wp_enqueue_style( 'bulledev-v9-style', get_stylesheet_uri() );
     }
@@ -64,7 +66,7 @@ function add_async( $tag, $handle ) {
 }
 
 
-// Critical CSS
+// Critical CSS only for main domain
 if( strpos($_SERVER['SERVER_NAME'], 'bulledev.com') ){
     add_action('wp_head','hook_css', 5);
 }
@@ -213,3 +215,17 @@ function bulledev_remove_wp_ver_css_js( $src ) {
         $src = remove_query_arg( 'ver', $src );
     return $src;
 }
+
+
+function notify_question_author($comment_id, $comment = null) {
+    global $post;
+    if( 'question' == get_post_type($post->ID) ){
+        $to = get_post_meta( $post->ID, 'question-courriel', true );
+        $subject = 'Une nouvelle réponse à votre question!';
+        $message = 'Il y a une nouvelle réponse à votre question: ' . get_permalink($post->ID);
+        $headers[] = 'From: bulledev.com <no-reply@bulledev.com>';
+
+        wp_mail( $to, $subject, $message, $headers );
+    }
+}
+add_action('wp_insert_comment', 'notify_question_author');
